@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Szczegóły{% endblock title %}
+
+
+{% block content %}
+    <div class="container" style="padding-top: 60px">
+        <div id="fh5co-main">
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">{{post.title }}</h2>
+                <div class="row row-bottom-padded-md">
+
+                    <hr style="border-color: gray">
+                    <img class="leftphoto" src="{{ MEDIA_URL }}{{ post.photo }}" width=100%" >
+                    <style>
+                        .leftphoto {
+                            float:left;
+                            margin: 4px 20px 15px 0px;
+                        }
+                    </style>
+                    <h5>{{ post.content|safe }}</h5>
+                    <div style="clear: left"></div>
+                    <h6>
+                        {{ post.publish }}
+                        {% if user == 'admin' or user == 'moder' %}
+                    |
+                        <a href="/blog/delete/{{ post.id }}">Удалить новость</a>
+                    |
+                        <a href="/blog/edit/{{ post.id }}">Редактировать новость</a>
+                    |
+                        {% endif %}
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

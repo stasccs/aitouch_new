@@ -1,0 +1,187 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Home{% endblock title %}
+
+
+{% block content %}
+    <div id="fh5co-main">
+			<aside id="fh5co-hero" class="js-fullheight">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+				   	<li style="background-image: url({% static 'img/bkground1.png' %});">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<h1>"DAJEMY JAKOŚĆ" -TO NAJLEPSZA FORMA REKLAMY</h1>
+
+											<p><a class="btn btn-primary btn-learn" href="/home/contact">Oferta<i class="icon-arrow-right3"></i></a></p>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				   	<li style="background-image: url({% static 'img/bkground1.png' %});">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<h1>CENA BŁĘDU JEST NIŻSZA NIŻ CENA BEZCZYNNOŚCI</h1>
+
+											<p><a class="btn btn-primary btn-learn" href="/home/contact">Oferta<i class="icon-arrow-right3"></i></a></p>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				   	<li style="background-image: url({% static 'img/bkground1.png' %});">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text">
+					   				<div class="slider-text-inner">
+					   					<h1>NAJPOTĘŻNIEJSZYM ELEMENTEM REKLAMY -JEST PRAWDA</h1>
+
+											<p><a class="btn btn-primary btn-learn" href="/home/contact">Oferta<i class="icon-arrow-right3"></i></a></p>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				  	</ul>
+			  	</div>
+			</aside>
+
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Nasze usługi</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<img class="leftphoto" src="{% static 'img/uslugi_1.png' %}" width="100" >
+							</div>
+							<div class="fh5co-text">
+
+								<h3>PPC</h3>
+								<div class="fh5co-icon">
+									<img class="leftphoto" src="{% static 'img/uslugi_1.png' %}" width="100" >
+								</div>
+								<p>Udana kampania reklamowa zapewni wzrost ukierunkowanych wizytów na stronie, a także sprzedaż towarów i usług. Wykonujemy:
+									media planning, raporty i rekomendacje, konfigurowanie analiz i konwersji, zbieranie semantyki i wykluczających słów kluczowych, pełną optymalizację kampanii reklamowych.
+								</p>
+								<a href="/home/services#ppc" > Więcej <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<img class="leftphoto" src="{% static 'img/uslugi_2.png' %}" width="100" >
+							</div>
+							<div class="fh5co-text">
+								<h3>Marketing E-mailowy</h3>
+								<p>	E-mail - marketing
+									Nie mniej skuteczne narzędzie marketingu online. Zbieramy bazę do dalszej interakcji i sprzedaży. Korzystając z «email newsletter»
+									, możemy nawiązać komunikację z klientami, zwiększyć LTV, dokonać nowych lub powtórnych zakupów oraz segmentować bazę danych indywidualnie dla Twoich produktów.
+								</p>
+								<a href="/home/services#email" > Więcej <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<img class="leftphoto" src="{% static 'img/uslugi_3.png' %}" width="100" >
+							</div>
+							<div class="fh5co-text">
+								<h3>SMM</h3>
+								<p>SMM - pozycjonowanie marki i reputacja w sieciach społecznościowych. W tym celu opracowujemy strategię i utrzymujemy stronę Twojej marki na FB i Instagramie, jesteśmy odpowiedzialni za projekt strony i jakość postów, opracowujemy content plan
+									 i realizujemy sprzedaż za pomocą ukierunkowanych reklam.
+								</p>
+								<a href="/home/services#smm" > Więcej <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<img class="leftphoto" src="{% static 'img/uslugi_4.png' %}" width="100" >
+							</div>
+							<div class="fh5co-text">
+								<h3>SEO</h3>
+								<p>Organiczna promocja stron internetowych w wynikach wyszukiwania. Zrobimy: listę promowanych zapytań, analizę aktualnego popytu, analizę algorytmów rankingowych wyszukiwarek, analizę zachowań użytkowników na stronie. Przeprowadzimy wewnętrzną i zewnętrzną optymalizację twoich stron internetowych i doprowadzimy do najpopularniejszych zapytań Google. </p>
+								<a href="/home/services#seo" > Więcej <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+<!--   отображение последних новостей из блога
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Recent Blog</h2>
+				<div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<a href="#" class="blog-img"><img src=<img src="{{ p.photo }}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<div class="desc">
+								<h3><a href="/blog/single/{{ p.id }}">{{ p.title }}</a></h3>
+								<span><small>by Admin </small></span>
+								<p>{{ p.annotation }}</p>
+								<a href="/blog/single/{{ p.id }}" class="lead"> Więcej <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<a href="#" class="blog-img"><img src="images/img-2.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<div class="desc">
+								<h3><a href="#">Inspirational Website</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
+								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<a href="#" class="blog-img"><img src="images/img-3.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<div class="desc">
+								<h3><a href="#">Inspirational Website</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
+								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+							<a href="#" class="blog-img"><img src="images/img-4.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<div class="desc">
+								<h3><a href="#">Inspirational Website</a></h3>
+								<span><small>by Admin </small> / <small> Web Design </small> / <small> <i class="icon-comment"></i> 14</small></span>
+								<p>Design must be functional and functionality must be translated into visual aesthetics</p>
+								<a href="#" class="lead">Read More <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			-->
+
+			<div class="fh5co-narrow-content">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+						<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Get in touch</h2>
+						<p class="fh5co-lead">Jeżeli masz pytania, potrzebujesz wyceny usług, skontaktuj się z nami!</p>
+							<p><a href="/home/contact" class="btn btn-primary">Więcej</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

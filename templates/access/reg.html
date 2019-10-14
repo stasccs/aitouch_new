@@ -1,0 +1,57 @@
+<div class="container" style="padding-top: 50px">
+    <h2>Регистрация</h2>
+        <hr style="border-color: gray">
+        <form action="#" method="post">
+            {% csrf_token %}
+            <table>
+                {{ form }}
+            </table>
+            <div id="info"></div>
+            <p style="margin-top: 15px">
+                <input type="submit" value="Отправить">
+                &nbsp;
+                <input type="reset" value="Очистить">
+
+            </p>
+        </form>
+    </div>
+<style>
+    #info {
+        color: red;
+        font: bold 14pt "trebuchet MS";
+        margin-top: 10px;
+        padding-left: 70px;
+    }
+</style>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#login').blur(function () {
+                let login = $(this).val();
+                if (login == '') {
+                    alert('Вы не заполнили поле логин')}
+                else {
+                     $.ajax({
+                     type: 'GET',
+                     async: true,
+                     url: 'ajax1',
+                     dataType: 'json',
+                     data: 'login_scope=' + login,
+                        success: function (response) {
+                        let n = response['count'];
+                        if (n == 0) {
+                            $('#info').text('Логин свободен');
+                            $('#info').css('color', 'green');
+                        } else {
+                            $('#info').text('Логин занят');
+                            $('#info').css('color', 'red');
+                            $('#login').val('');
+                            $('#login').focus();
+                        }
+                     }
+                   });
+                }
+            });
+        });
+    </script>

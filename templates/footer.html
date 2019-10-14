@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<p class="footer__soc2">
+    Мы в цоциальных сетях
+</p>
+<div class="soc_img">
+    <a target="_blank" href="https://www.facebook.com/aitouchpl/"><img src="{% static '/img/fb.png' %}" width="40" height="40" alt=""></a>
+    <a target="_blank" href="https://www.instagram.com/aitouch.pl/"><img src="{% static '/img/instagram.png' %}" width="40" height="40" alt=""></a>
+</div>
+{% if user == 'admin' %}
+        <li>
+        <a href="/access/exit_"> Выход <span class="sr-only">(current)</span></a>
+        </li>
+
+{% endif %}
+<hr style="border-color: gray">
+<h6>
+    Copyright &copy; Stanislav Horodnichiy, 2019
+</h6>

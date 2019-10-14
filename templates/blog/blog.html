@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog{% endblock title %}
+
+
+{% block content %}
+    <div class="container">
+    {% if user == 'admin' %}
+        |
+        <a href="/blog/create">Добавить новость</a>
+        |
+        <a href="/access/exit_"> Выход <span class="sr-only">(current)</span></a>
+    {% endif %}
+     </div>
+
+        <div id="fh5co-main">
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Nasz Blog</h2>
+                <div class="row row-bottom-padded-md">
+                    {% for p in posts %}
+					<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+						<div class="blog-entry">
+                            <a href="/blog/single/{{ p.id }}" class="blog-img"><img src="{{ MEDIA_URL }}{{ p.photo }}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co"></a>
+							<div class="desc">
+								<h3><a href="/blog/single/{{ p.id }}">{{ p.title }}</a></h3>
+								<span><small>by Admin </small></span>
+								<p>{{ p.annotation }}</p>
+								<a href="/blog/single/{{ p.id }}" class="lead">Więcej <i class="icon-arrow-right3"></i></a>
+							</div>
+						</div>
+					</div>
+                    {% endfor %}
+
+
+				    <div class="fh5co-narrow-content">
+				        <div class="row">
+					        <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+						        <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Get in touch</h2>
+						        <p class="fh5co-lead">Jeżeli masz pytania, potrzebujesz wyceny usług, skontaktuj się z nami!</p>
+							    <p><a href="/home/contact" class="btn btn-primary">Więcej</a></p>
+					        </div>
+				        </div>
+			        </div>
+                 </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+        <span class="step-links">
+        {% if posts.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ posts.previous_page_number }}">previous</a>
+        {% endif %}
+
+
+
+        {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}">next</a>
+            <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+        </span>
+    </div>
+</div>
+
+
+<style>
+    #news {
+        margin-bottom: 15px;
+    }
+    #news td {
+        padding: 5px 15px;
+    }
+</style>
+{% endblock content %}

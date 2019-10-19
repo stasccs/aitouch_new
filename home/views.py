@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import ContactForm
 from django.http import HttpResponse, HttpResponseRedirect, BadHeaderError
 from django.core.mail import send_mail
+from django.contrib import messages
 
 
 # Представление для загрузки главной страницы сайта
@@ -15,6 +16,22 @@ def about(request):
 
 def services(request):
     return render(request, 'home/services.html')
+
+
+def smm(request):
+    return render(request, 'home/SMM.html')
+
+
+def seo(request):
+    return render(request, 'home/SEO.html')
+
+
+def email(request):
+    return render(request, 'home/email.html')
+
+
+def context(request):
+    return render(request, 'home/context.html')
 
 
 def thanks(request):
@@ -41,8 +58,8 @@ def contact(request):
             except BadHeaderError: #Защита от уязвимости
                 return HttpResponse('Invalid header found')
             # Переходим на другую страницу, если сообщение отправлено
-            return HttpResponseRedirect('/home/thanks')
-
+            messages.success(request, 'Twoja wiadomość została wysłana. Dziękujemy!')
+            form = ContactForm()
     else:
         form = ContactForm()
     # Выводим форму в шаблон

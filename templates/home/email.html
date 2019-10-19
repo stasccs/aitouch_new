@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Usługi{% endblock title %}
+
+
+{% block content %}
+
+		<div id="fh5co-main">
+			<div class="fh5co-narrow-content">
+				<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">oferujemy</h2>
+				  <div class="row row-bottom-padded-md">
+					<div class="col-md-3 col-sm-6 col-padding text-center animate-box">
+						<a href="#email" class="work image-popup" style="background-image: url({% static 'img/oferta_2.png' %}); background-size: contain;">
+
+						</a>
+					</div>
+
+					<div class="fh5co-narrow-content" data-animate-effect="fadeInLeft" style="background-color: whitesmoke;>
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<a name="email" href="#"></a>
+							<p class="fh5co-heading animate-box" data-animate-effect="fadeInLeft" style="font-size: 18pt; color: black">E-mail marketing</p>
+							<div class="services-1">
+								<p>E-mail marketing jest jednym z najbardziej skutecznych obszarów marketingu cyfrowego. Zobaczmy, dlaczego
+								Digital-marketing jest uważany za potężne   narzędzie dla biznesu.
+								Co robimy:</p>
+								<p>- budujemy efektywną komunikację z potencjalnym klientem</p>
+								<p>- przedstawiamy markę oraz jej produkt lub usługę</p>
+								<p>- ożywiamy nieaktywnych, ale lojalnych subskrybentów</p>
+								<p>- automatyzacja "lejka sprzedażowego"</p>
+								<p>- segmentacja bazy klientów</p>
+								<p>- call to action</p>
+							</div>
+						</div>
+					</div>
+
+			<div class="fh5co-narrow-content">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+						<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">Get in touch</h2>
+						<p class="fh5co-lead">Jeżeli masz pytania, potrzebujesz wyceny usług, skontaktuj się z nami!</p>
+							<p><a href="/home/contact" class="btn btn-primary">Więcej</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}
+

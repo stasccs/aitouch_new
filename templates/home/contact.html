@@ -57,7 +57,13 @@
 					<div class="row">
 						<div class="col-md-12">
 							<div class="row">
-
+								{% if messages %}
+									<ul class="messages" style="color: green">
+    									{% for message in messages %}
+    								<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    									{% endfor %}
+									</ul>
+									{% endif %}
 								<div class="col-md-6">
 									<div class="form-group">
 									{{ form }}
@@ -67,6 +73,7 @@
 									<div class="form-group">
 										<input type="submit" class="btn btn-primary btn-md" value="Wyślij wiadomość">
 									</div>
+
 								</div>
 
 							</div>

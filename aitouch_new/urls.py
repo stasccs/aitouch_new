@@ -18,7 +18,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
+from django.conf.urls import url
 from home import views
+
+
+
 
 
 i18n_patterns(
@@ -29,6 +33,7 @@ i18n_patterns(
             path('blog/', include('blog.urls')),
             path(r'^tinymce/', include('tinymce.urls')),
             path(r'^i18n/', include('django.conf.urls.i18n')),
+
 )
 urlpatterns = [
             path('admin/', admin.site.urls),
@@ -36,7 +41,10 @@ urlpatterns = [
             path('home/', include('home.urls')),
             path('access/', include('access.urls')),
             path('blog/', include('blog.urls')),
-            path(r'^tinymce/', include('tinymce.urls')),
+            url(r'^tinymce/', include('tinymce.urls')),
+
+
+
 ]
 
 if settings.DEBUG:

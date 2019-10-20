@@ -34,9 +34,7 @@ def context(request):
     return render(request, 'home/context.html')
 
 
-def thanks(request):
 
-    return render(request, 'home/thanks.html')
 
 
 # Функция формы обратной связи

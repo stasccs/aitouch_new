@@ -11,6 +11,5 @@ urlpatterns = [
     path('seo', views.seo, name='seo'),
     path('email', views.email, name='email'),
     path('context', views.context, name='context'),
-    path('thanks', views.thanks, name='thanks'),
 
 ]
